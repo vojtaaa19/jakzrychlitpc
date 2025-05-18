@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jak zrychlit počítač</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .tip-content { display: none; }
+    .tip-content.active { display: block; }
+    @media (max-width: 640px) {
+      .tip-title { font-size: 1.25rem; }
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans relative">
+
+  <!-- Tvoje ikona vlevo nahoře -->
+
+  <header class="bg-blue-600 py-6 text-center">
+    <h1 class="text-4xl font-bold">Jak zrychlit počítač</h1>
+    <p class="mt-2 text-lg">10 praktických tipů pro rychlejší a přizpůsobený počítač</p>
+  </header>
+
+  <main class="max-w-5xl mx-auto py-10 px-4">
+    <section id="tips" class="space-y-6">
+      <div class="tip bg-gray-800 rounded-lg shadow-lg">
+        <h2 class="tip-title text-2xl font-semibold p-4 cursor-pointer hover:bg-blue-700 transition" onclick="toggleTip(this)">1. Vyčistěte nepotřebné soubory</h2>
+        <div class="tip-content p-4">
+          <p>Pravidelné čištění disku od nepotřebných souborů uvolní místo a zlepší výkon. Dočasné soubory, staré zálohy nebo nepoužívané programy zpomalují systém.</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Použijte vestavěný nástroj „Vyčištění disku“ ve Windows nebo aplikace jako CCleaner.</li>
+            <li>Smažte obsah složky %temp% (stačí zadat %temp% do Průzkumníka).</li>
+            <li>Odinstalujte programy, které nepoužíváte, přes Ovládací panely.</li>
+            <li>Vyprázdněte koš, aby se uvolnilo místo.</li>
+            <li>Zkontrolujte složku Stažené soubory a odstraňte staré soubory.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tip bg-gray-800 rounded-lg shadow-lg">
+        <h2 class="tip-title text-2xl font-semibold p-4 cursor-pointer hover:bg-blue-700 transition" onclick="toggleTip(this)">2. Optimalizujte spouštění systému</h2>
+        <div class="tip-content p-4">
+          <p>Příliš mnoho programů spouštěných při startu prodlužuje dobu bootování. Omezte je na minimum, aby se počítač rychleji spustil.</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Otevřete Správce úloh (Ctrl+Shift+Esc) a přejděte na záložku „Po spuštění“.</li>
+            <li>Zakažte nepotřebné aplikace, jako jsou streamovací služby nebo chatovací programy.</li>
+            <li>Nechte aktivní klíčové programy, například antivirus.</li>
+            <li>Zvažte použití nástrojů jako Autoruns pro pokročilou správu.</li>
+            <li>Pravidelně kontrolujte nové aplikace, které se mohou přidat do spouštění.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tip bg-gray-800 rounded-lg shadow-lg">
+        <h2 class="tip-title text-2xl font-semibold p-4 cursor-pointer hover:bg-blue-700 transition" onclick="toggleTip(this)">3. Upgradujte hardware</h2>
+        <div class="tip-content p-4">
+          <p>Starší hardware může být překážkou. Upgrade klíčových komponent výrazně zrychlí počítač.</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Zvyšte kapacitu RAM – 8 GB je minimum, 16 GB ideální pro moderní aplikace.</li>
+            <li>Vyměňte HDD za SSD, což zkrátí dobu načítání systému i programů.</li>
+            <li>Pro hráče zvažte upgrade grafické karty na novější model.</li>
+            <li>Zkontrolujte kompatibilitu nových komponent s vaší základní deskou.</li>
+            <li>Pokud máte notebook, zvažte externí SSD pro rychlejší přístup k datům.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tip bg-gray-800 rounded-lg shadow-lg">
+        <h2 class="tip-title text-2xl font-semibold p-4 cursor-pointer hover:bg-blue-700 transition" onclick="toggleTip(this)">4. Aktualizujte systém a ovladače</h2>
+        <div class="tip-content p-4">
+          <p>Zastaralý software a ovladače mohou způsobovat zpomalení nebo nestabilitu. Udržujte vše aktuální.</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Nastavte automatické aktualizace Windows nebo vašeho operačního systému.</li>
+            <li>Stáhněte nejnovější ovladače pro grafickou kartu, čipset a další hardware.</li>
+            <li>Použijte nástroje jako Driver Booster nebo výrobní software (např. GeForce Experience).</li>
+            <li>Zkontrolujte aktualizace BIOSu pro základní desku (opatrně!).</li>
+            <li>Pravidelně aktualizujte klíčové aplikace, jako jsou prohlížeče.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tip bg-gray-800 rounded-lg shadow-lg">
+        <h2 class="tip-title text-2xl font-semibold p-4 cursor-pointer hover:bg-blue-700 transition" onclick="toggleTip(this)">5. Vypněte vizuální efekty</h2>
+        <div class="tip-content p-4">
+          <p>Vizuální efekty, jako jsou animace a průhlednosti, zatěžují hardware. Jejich vypnutí zlepší výkon.</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Přejděte na „Nastavení systému“ a vyberte „Upřesnit nastavení vzhledu“.</li>
+            <li>Zvolte „Nastavit pro nejlepší výkon“ nebo vypněte konkrétní efekty.</li>
+            <li>Zvažte použití klasického motivu Windows pro minimální zátěž.</li>
+            <li>V Linuxu nebo macOS omezte animace v nastavení vzhledu.</li>
+            <li>Testujte změny, abyste našli rovnováhu mezi vzhledem a výkonem.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tip bg-gray-800 rounded-lg shadow-lg">
+        <h2 class="tip-title text-2xl font-semibold p-4 cursor-pointer hover:bg-blue-700 transition" onclick="toggleTip(this)">6. Zkontrolujte malware</h2>
+        <div class="tip-content p-4">
+          <p>Virus nebo malware může výrazně zpomalit počítač a ohrozit data. Pravidelná kontrola a prevence jsou nezbytné pro rychlý a bezpečný systém.</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Použijte spolehlivý antivirus, například Windows Defender, Malwarebytes nebo ESET.</li>
+            <li>Proveďte úplnou kontrolu systému alespoň jednou měsíčně, ideálně po aktualizaci antiviru.</li>
+            <li>Nevypínejte antivirus během běžného používání, aby vás chránil v reálném čase.</li>
+            <li>Stahujte software pouze z ověřených zdrojů, jako jsou oficiální weby nebo obchody (např. Microsoft Store).</li>
+            <li>Pokud je systém silně infikován, zvažte zálohu důležitých dat a přeinstalaci operačního systému.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tip bg-gray-800 rounded-lg shadow-lg">
+        <h2 class="tip-title text-2xl font-semibold p-4 cursor-pointer hover:bg-blue-700 transition" onclick="toggleTip(this)">7. Defragmentujte disk (u HDD)</h2>
+        <div class="tip-content p-4">
+          <p>U pevných disků (HDD) defragmentace zlepší rychlost přístupu k datům. U SSD to není potřeba.</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Použijte vestavěný nástroj „Defragmentace a optimalizace jednotek“ ve Windows.</li>
+            <li>Naplánujte defragmentaci jednou za měsíc.</li>
+            <li>Ujistěte se, že máte alespoň 15 % volného místa na disku.</li>
+            <li>Nikdy nedefragmentujte SSD – může to zkrátit jeho životnost.</li>
+            <li>Zkontrolujte typ disku v „Tento počítač“ před spuštěním.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tip bg-gray-800 rounded-lg shadow-lg">
+        <h2 class="tip-title text-2xl font-semibold p-4 cursor-pointer hover:bg-blue-700 transition" onclick="toggleTip(this)">8. Přizpůsobte si plochu</h2>
+        <div class="tip-content p-4">
+          <p>Přizpůsobení pracovní plochy zvyšuje produktivitu a zlepšuje zážitek z používání.</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Nastavte si tapetu, která vás motivuje, ale není příliš „těžká“ (vysoké rozlišení).</li>
+            <li>Vytvořte zkratky na ploše pro často používané programy a složky.</li>
+            <li>Uspořádejte ikony do logických skupin.</li>
+            <li>Použijte nástroje jako Fences pro organizaci plochy.</li>
+            <li>Zvažte widgety pro rychlý přístup k informacím (např. počasí).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tip bg-gray-800 rounded-lg shadow-lg">
+        <h2 class="tip-title text-2xl font-semibold p-4 cursor-pointer hover:bg-blue-700 transition" onclick="toggleTip(this)">9. Vypněte aplikace po spuštění</h2>
+        <div class="tip-content p-4">
+          <p>Aplikace běžící na pozadí po spuštění systému mohou spotřebovávat zdroje a zpomalovat počítač. Vypněte ty, které nepotřebujete, pro lepší výkon.</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Otevřete Správce úloh (Ctrl+Shift+Esc) a podívejte se na procesy na pozadí.</li>
+            <li>Ukončete nepotřebné aplikace, jako jsou streamovací služby nebo aktualizátory, kliknutím na „Ukončit úlohu“.</li>
+            <li>V nastavení Windows (Aplikace > Spuštění) vypněte aplikace, které se automaticky spouštějí.</li>
+            <li>Použijte nástroje jako CCleaner nebo Task Manager k identifikaci náročných procesů.</li>
+            <li>Pravidelně sledujte nově nainstalované programy, které se mohou spouštět automaticky.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tip bg-gray-800 rounded-lg shadow-lg">
+        <h2 class="tip-title text-2xl font-semibold p-4 cursor-pointer hover:bg-blue-700 transition" onclick="toggleTip(this)">10. Spravujte napájení</h2>
+        <div class="tip-content p-4">
+          <p>Optimalizace nastavení napájení může zlepšit výkon, zejména u notebooků.</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Přepněte na režim „Vysoký výkon“ v nastavení napájení Windows.</li>
+            <li>Vypněte úsporné funkce pro CPU v BIOSu, pokud je to možné.</li>
+            <li>U notebooků zkontrolujte, zda je baterie v dobrém stavu.</li>
+            <li>Omezte procesy na pozadí, které zvyšují spotřebu energie.</li>
+            <li>Pravidelně kalibrujte baterii notebooku pro přesnější údaje.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-blue-600 py-4 text-center">
+    <p>© 2025 Jak zrychlit počítač. Všechna práva vyhrazena.</p>
+  </footer>
+
+  <script>
+    function toggleTip(element) {
+      const allTips = document.querySelectorAll('.tip-content');
+      const currentTip = element.nextElementSibling;
+
+      allTips.forEach(tip => {
+        if (tip !== currentTip) {
+          tip.classList.remove('active');
+        }
+      });
+
+      currentTip.classList.toggle('active');
+    }
+
+    function toggleDiscord() {
+      const text = document.getElementById('discordText');
+      if (text.classList.contains('max-w-0')) {
+        text.classList.remove('max-w-0');
+        text.classList.add('max-w-xs', 'ml-2');
+      } else {
+        text.classList.remove('max-w-xs', 'ml-2');
+        text.classList.add('max-w-0');
+      }
+    }
+  </script>
+</body>
+</html>
